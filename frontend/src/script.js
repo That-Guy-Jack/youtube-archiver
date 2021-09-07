@@ -16,12 +16,14 @@ function createDownloadListing(prettyName, key, path) {
   const newRow = tbody.insertRow(0)
   const nameCell = newRow.insertCell()
   const downloadCell = newRow.insertCell()
+  const downloadCell2 = newRow.insertCell()
   const managementCell = newRow.insertCell()
   const deleteIconSpan = document.createElement('span')
 
   newRow.id = key
   nameCell.innerHTML = prettyName
-  downloadCell.innerHTML = `<a href="${path}/">Download</a>`
+  downloadCell.innerHTML = `<a href="${path}/${prettyName}.mkv" download >Download</a>`
+  downloadCell2.innerHTML = `<a href="${path}/${prettyName}.mp3" download >Download</a>`
 
   /* Need to wrap the Font Awesome icon in a span in order to have something stable to attach events to.
   FA replaces the <i> tag with a <svg> tag so attaching directly to the FA resource does not work */
@@ -40,7 +42,7 @@ function createDownloadListing(prettyName, key, path) {
  */
 function download() {
   const url = document.getElementById('url')
-  const downloadType = document.querySelector('input[name="download_type"]:checked').value
+  const downloadType = "both"
   const params = {}
 
   if (!url.value.trim()) {
