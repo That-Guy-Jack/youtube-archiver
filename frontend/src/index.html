@@ -49,35 +49,13 @@
             </div>
           </div>
         </div>
-        <div class="field is-horizontal">
-          <div class="field-label">
-            <label class="label">Download</label>
-          </div>
-          <div class="field-body">
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="download_type" value="both" checked />
-                Both (MKV and MP3)
-              </label>
-              <label class="radio">
-                <input type="radio" name="download_type" value="video" />
-                Video (MKV)
-              </label>
-              <label class="radio">
-                <input type="radio" name="download_type" value="audio" />
-                Audio (MP3)
-              </label>
-            </div>
-          </div>
-        </div>
+
         <div class="field is-horizontal">
           <div class="field-label">
             <!-- Left empty for spacing -->
           </div>
           <div class="field-body">
-            <button class="button is-primary" onclick="download()">
-              Download Now
-            </button>
+            <button class="button is-primary" onclick="download()">Download Now</button>
           </div>
         </div>
       </div>
@@ -96,7 +74,8 @@
           <thead>
             <tr>
               <th>Name</th>
-              <th>Files</th>
+              <th>Video</th>
+              <th>Audio</th>
               <th>Management</th>
             </tr>
           </thead>
